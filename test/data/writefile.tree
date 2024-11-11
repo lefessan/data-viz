@@ -1,0 +1,5669 @@
+MEMORY_BLOCK 001
+BEGIN_STRUCT struct cb_program
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PROGRAM
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD program_name STRING WRITEFILE
+FIELD program_id STRING WRITEFILE
+FIELD orig_program_id STRING WRITEFILE
+FIELD word_table ABSTRACT cb_words
+FIELD local_include MEMORY_BLOCK 002
+BEGIN_STRUCT struct local_filename
+FIELD local_name STRING writefile.c.l.h
+FIELD local_include_name STRING writefile.c.l.h
+FIELD local_fp ABSTRACT file
+END_STRUCT struct local_filename
+FIELD entry_list MEMORY_BLOCK 003
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 004
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD purpose MEMORY_BLOCK 005
+BEGIN_STRUCT struct cb_integer
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_INTEGER
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 57
+END_STRUCT struct cb_tree_common
+FIELD val INT 32768
+END_STRUCT struct cb_integer
+END_STRUCT struct cb_list
+FIELD purpose MEMORY_BLOCK 006
+BEGIN_STRUCT struct cb_label
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LABEL
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 59
+END_STRUCT struct cb_tree_common
+FIELD name STRING WRITEFILE
+FIELD orig_name STRING WRITEFILE
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 2
+FIELD section_id INT 2
+FIELD flag_entry INT 1
+FIELD flag_begin INT 1
+END_STRUCT struct cb_label
+END_STRUCT struct cb_list
+FIELD file_list MEMORY_BLOCK 007
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 12
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 008
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 18
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 009
+BEGIN_STRUCT struct cb_file
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FILE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 18
+END_STRUCT struct cb_tree_common
+FIELD name STRING NUM-FILE
+FIELD cname STRING NUM_FILE
+FIELD assign MEMORY_BLOCK 010
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 18
+END_STRUCT struct cb_tree_common
+FIELD data STRING rand9000-1.txt
+FIELD size INT 14
+END_STRUCT struct cb_literal
+FIELD file_status MEMORY_BLOCK 011
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 20
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 012
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 44
+END_STRUCT struct cb_tree_common
+FIELD name STRING FD-FILE-STATUS
+FIELD sister MEMORY_BLOCK 013
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 45
+END_STRUCT struct cb_tree_common
+FIELD name STRING END-OF-FILE
+FIELD sister MEMORY_BLOCK 014
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 46
+END_STRUCT struct cb_tree_common
+FIELD name STRING KEY-NUM
+FIELD values MEMORY_BLOCK 015
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 46
+END_STRUCT struct cb_tree_common
+FIELD data STRING 0
+FIELD size INT 1
+END_STRUCT struct cb_literal
+FIELD sister MEMORY_BLOCK 016
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 47
+END_STRUCT struct cb_tree_common
+FIELD name STRING MAX-KEYS
+FIELD values MEMORY_BLOCK 017
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 47
+END_STRUCT struct cb_tree_common
+FIELD data STRING 9999
+FIELD size INT 4
+END_STRUCT struct cb_literal
+FIELD sister MEMORY_BLOCK 018
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 48
+END_STRUCT struct cb_tree_common
+FIELD name STRING SAVE-STEP
+FIELD values MEMORY_BLOCK 019
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 48
+END_STRUCT struct cb_tree_common
+FIELD data STRING 1
+FIELD size INT 1
+END_STRUCT struct cb_literal
+FIELD sister MEMORY_BLOCK 020
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 49
+END_STRUCT struct cb_tree_common
+FIELD name STRING NEXT-SAVE
+FIELD sister MEMORY_BLOCK 021
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 50
+END_STRUCT struct cb_tree_common
+FIELD name STRING FILE-SAVE
+FIELD children MEMORY_BLOCK 022
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 51
+END_STRUCT struct cb_tree_common
+FIELD name STRING FILE-BASENAME
+FIELD values MEMORY_BLOCK 023
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 51
+END_STRUCT struct cb_tree_common
+FIELD data STRING TEST-FILE-
+FIELD size INT 10
+END_STRUCT struct cb_literal
+FIELD parent ALREADY_SEEN 021
+FIELD sister MEMORY_BLOCK 024
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 52
+END_STRUCT struct cb_tree_common
+FIELD name STRING FILE-NUM
+FIELD values MEMORY_BLOCK 025
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 52
+END_STRUCT struct cb_tree_common
+FIELD data STRING 00000
+FIELD size INT 5
+END_STRUCT struct cb_literal
+FIELD parent ALREADY_SEEN 021
+FIELD sister MEMORY_BLOCK 026
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 53
+END_STRUCT struct cb_tree_common
+FIELD name STRING FILE-EXTENSION
+FIELD values MEMORY_BLOCK 027
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 53
+END_STRUCT struct cb_tree_common
+FIELD data STRING .dat
+FIELD size INT 4
+END_STRUCT struct cb_literal
+FIELD parent ALREADY_SEEN 021
+FIELD sister MEMORY_BLOCK 028
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 54
+END_STRUCT struct cb_tree_common
+FIELD name STRING FILE-TERM
+FIELD values MEMORY_BLOCK 029
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 54
+END_STRUCT struct cb_tree_common
+FIELD data STRING  
+FIELD size INT 1
+END_STRUCT struct cb_literal
+FIELD parent ALREADY_SEEN 021
+FIELD pic MEMORY_BLOCK 030
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(1)
+FIELD size INT 1
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 40
+FIELD size INT 1
+FIELD level INT 5
+FIELD offset INT 19
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 031
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(4)
+FIELD size INT 4
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 39
+FIELD size INT 4
+FIELD level INT 5
+FIELD offset INT 15
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 032
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 38
+FIELD size INT 5
+FIELD level INT 5
+FIELD offset INT 10
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 033
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(10)
+FIELD size INT 10
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 37
+FIELD size INT 10
+FIELD level INT 5
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD sister MEMORY_BLOCK 034
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 55
+END_STRUCT struct cb_tree_common
+FIELD name STRING HAS-IDX
+FIELD values MEMORY_BLOCK 035
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 55
+END_STRUCT struct cb_tree_common
+FIELD data STRING 0
+FIELD size INT 1
+END_STRUCT struct cb_literal
+FIELD sister MEMORY_BLOCK 036
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 57
+END_STRUCT struct cb_tree_common
+FIELD name STRING COB-CRT-STATUS
+FIELD pic MEMORY_BLOCK 037
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING 9(4)
+FIELD size INT 4
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 4
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 42
+FIELD size INT 4
+FIELD memory_size INT 4
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_no_init INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 038
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING 9(1)
+FIELD size INT 1
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 1
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 41
+FIELD size INT 1
+FIELD level INT 1
+FIELD memory_size INT 1
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 36
+FIELD size INT 20
+FIELD level INT 1
+FIELD memory_size INT 20
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 039
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING 9(10)
+FIELD size INT 10
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 10
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 35
+FIELD size INT 10
+FIELD level INT 1
+FIELD memory_size INT 10
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 040
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING 9(10)
+FIELD size INT 10
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 10
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 34
+FIELD size INT 10
+FIELD level INT 1
+FIELD memory_size INT 10
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 041
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING 9(10)
+FIELD size INT 10
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 10
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 33
+FIELD size INT 10
+FIELD level INT 1
+FIELD memory_size INT 10
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 042
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING 9(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 5
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 32
+FIELD size INT 5
+FIELD level INT 1
+FIELD memory_size INT 5
+FIELD occurs_max INT 1
+FIELD count INT 4
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 043
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X
+FIELD size INT 1
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 31
+FIELD size INT 1
+FIELD level INT 1
+FIELD memory_size INT 1
+FIELD occurs_max INT 1
+FIELD count INT 3
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 044
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING XX
+FIELD size INT 2
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 30
+FIELD size INT 2
+FIELD level INT 1
+FIELD memory_size INT 2
+FIELD occurs_max INT 1
+FIELD count INT 10
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD statement ENUM STMT_UNKNOWN
+FIELD word MEMORY_BLOCK 045
+BEGIN_STRUCT struct cb_word
+FIELD name STRING FD-FILE-STATUS
+FIELD items MEMORY_BLOCK 046
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 012
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD hashval INT 1718
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD description_entry MEMORY_BLOCK 047
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 33
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 009
+FIELD statement ENUM STMT_UNKNOWN
+FIELD word MEMORY_BLOCK 048
+BEGIN_STRUCT struct cb_word
+FIELD name STRING NUM-FILE
+FIELD items MEMORY_BLOCK 049
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 009
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD hashval INT 483
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD record MEMORY_BLOCK 050
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 36
+END_STRUCT struct cb_tree_common
+FIELD name STRING NUM-FILE Record
+FIELD sister MEMORY_BLOCK 051
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 34
+END_STRUCT struct cb_tree_common
+FIELD name STRING KEY-READ
+FIELD redefines ALREADY_SEEN 050
+FIELD file ALREADY_SEEN 009
+FIELD pic MEMORY_BLOCK 052
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING 9(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 5
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 23
+FIELD size INT 5
+FIELD level INT 1
+FIELD memory_size INT 5
+FIELD occurs_max INT 1
+FIELD count INT 2
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_FILE
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 053
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 24
+FIELD size INT 5
+FIELD memory_size INT 5
+FIELD occurs_max INT 1
+FIELD count INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD handler MEMORY_BLOCK 054
+BEGIN_STRUCT struct cb_label
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LABEL
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING Default Error Handler
+FIELD orig_name STRING Default Error Handler
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 1
+FIELD section_id INT 1
+FIELD flag_begin INT 1
+FIELD flag_default_handler INT 1
+END_STRUCT struct cb_label
+FIELD handler_prog ALREADY_SEEN 001
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD record_max INT 5
+FIELD organization ENUM COB_ORG_LINE_SEQUENTIAL
+FIELD access_mode ENUM COB_ACCESS_SEQUENTIAL
+FIELD assign_type ENUM CB_ASSIGN_EXT_FILE_NAME_REQUIRED
+FIELD flag_finalized INT 1
+FIELD exception_table MEMORY_BLOCK 055
+BEGIN_STRUCT struct cb_exception
+END_STRUCT struct cb_exception
+END_STRUCT struct cb_file
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 056
+BEGIN_STRUCT struct cb_file
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FILE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 12
+END_STRUCT struct cb_tree_common
+FIELD name STRING TEST-FILE
+FIELD cname STRING TEST_FILE
+FIELD assign MEMORY_BLOCK 057
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 12
+END_STRUCT struct cb_tree_common
+FIELD data STRING TEST-FILE.DAT
+FIELD size INT 13
+END_STRUCT struct cb_literal
+FIELD file_status MEMORY_BLOCK 058
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 16
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 012
+FIELD statement ENUM STMT_UNKNOWN
+FIELD word ALREADY_SEEN 045
+FIELD hashval INT 1718
+END_STRUCT struct cb_reference
+FIELD key MEMORY_BLOCK 059
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 15
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 060
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 29
+END_STRUCT struct cb_tree_common
+FIELD name STRING FD-KEY-REC
+FIELD parent MEMORY_BLOCK 061
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 27
+END_STRUCT struct cb_tree_common
+FIELD name STRING FD-TEST-REC
+FIELD children MEMORY_BLOCK 062
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 28
+END_STRUCT struct cb_tree_common
+FIELD name STRING FD-BEGIN-REC
+FIELD parent ALREADY_SEEN 061
+FIELD sister ALREADY_SEEN 060
+FIELD pic MEMORY_BLOCK 063
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 18
+FIELD size INT 5
+FIELD level INT 5
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_FILE
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD redefines MEMORY_BLOCK 064
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 33
+END_STRUCT struct cb_tree_common
+FIELD name STRING TEST-FILE Record
+FIELD sister ALREADY_SEEN 061
+FIELD pic MEMORY_BLOCK 065
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(25)
+FIELD size INT 25
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 22
+FIELD size INT 25
+FIELD memory_size INT 25
+FIELD occurs_max INT 1
+FIELD count INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD file ALREADY_SEEN 056
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 17
+FIELD size INT 25
+FIELD level INT 1
+FIELD memory_size INT 25
+FIELD occurs_max INT 1
+FIELD count INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_FILE
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD sister MEMORY_BLOCK 066
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 30
+END_STRUCT struct cb_tree_common
+FIELD name STRING FD-VALUE-REC
+FIELD parent ALREADY_SEEN 061
+FIELD sister MEMORY_BLOCK 067
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 31
+END_STRUCT struct cb_tree_common
+FIELD name STRING FD_END-REC
+FIELD parent ALREADY_SEEN 061
+FIELD pic MEMORY_BLOCK 068
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 21
+FIELD size INT 5
+FIELD level INT 5
+FIELD offset INT 20
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_FILE
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 069
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 20
+FIELD size INT 5
+FIELD level INT 5
+FIELD offset INT 15
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_FILE
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 070
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING 9(10)
+FIELD size INT 10
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 10
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 19
+FIELD size INT 10
+FIELD level INT 5
+FIELD offset INT 5
+FIELD occurs_max INT 1
+FIELD count INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_FILE
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD statement ENUM STMT_UNKNOWN
+FIELD word MEMORY_BLOCK 071
+BEGIN_STRUCT struct cb_word
+FIELD name STRING FD-KEY-REC
+FIELD items MEMORY_BLOCK 072
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 060
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD hashval INT 1734
+END_STRUCT struct cb_reference
+FIELD description_entry MEMORY_BLOCK 073
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 26
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 056
+FIELD statement ENUM STMT_UNKNOWN
+FIELD word MEMORY_BLOCK 074
+BEGIN_STRUCT struct cb_word
+FIELD name STRING TEST-FILE
+FIELD items MEMORY_BLOCK 075
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 056
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD hashval INT 1144
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD record ALREADY_SEEN 064
+FIELD handler ALREADY_SEEN 054
+FIELD handler_prog ALREADY_SEEN 001
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD record_min INT 25
+FIELD record_max INT 25
+FIELD organization ENUM COB_ORG_INDEXED
+FIELD access_mode ENUM COB_ACCESS_DYNAMIC
+FIELD assign_type ENUM CB_ASSIGN_EXT_FILE_NAME_REQUIRED
+FIELD flag_finalized INT 1
+FIELD exception_table MEMORY_BLOCK 076
+BEGIN_STRUCT struct cb_exception
+END_STRUCT struct cb_exception
+END_STRUCT struct cb_file
+END_STRUCT struct cb_list
+FIELD exec_list MEMORY_BLOCK 077
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 59
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 078
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 59
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 079
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 59
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 080
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 59
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 081
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 61
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 082
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 62
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 083
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 63
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 084
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 68
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 085
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 69
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 086
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 70
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 087
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 71
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 088
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 73
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 089
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 74
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 090
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 75
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 091
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 93
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 092
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 94
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 093
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 95
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 094
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 97
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 095
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 98
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 096
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 99
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 097
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 101
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 098
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 099
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 100
+BEGIN_STRUCT struct cb_perform
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PERFORM
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD data MEMORY_BLOCK 101
+BEGIN_STRUCT struct cb_label
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LABEL
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 59
+END_STRUCT struct cb_tree_common
+FIELD name STRING MAIN SECTION
+FIELD orig_name STRING MAIN SECTION
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+FIELD skip INT 1
+END_STRUCT struct cb_xref
+FIELD id INT 3
+FIELD section_id INT 3
+FIELD flag_section INT 1
+FIELD flag_dummy_section INT 1
+END_STRUCT struct cb_label
+FIELD perform_type ENUM CB_PERFORM_EXIT
+END_STRUCT struct cb_perform
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 102
+BEGIN_STRUCT struct cb_perform
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PERFORM
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD data MEMORY_BLOCK 103
+BEGIN_STRUCT struct cb_label
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LABEL
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 59
+END_STRUCT struct cb_tree_common
+FIELD name STRING MAIN PARAGRAPH
+FIELD orig_name STRING MAIN PARAGRAPH
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+FIELD skip INT 1
+END_STRUCT struct cb_xref
+FIELD id INT 4
+FIELD section_id INT 4
+FIELD flag_dummy_paragraph INT 1
+FIELD flag_statement INT 1
+END_STRUCT struct cb_label
+FIELD perform_type ENUM CB_PERFORM_EXIT
+END_STRUCT struct cb_perform
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 104
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 101
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_STOP_RUN
+FIELD body MEMORY_BLOCK 105
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 106
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_stop_run
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 107
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 108
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 109
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING RETURN-CODE
+FIELD values MEMORY_BLOCK 110
+BEGIN_STRUCT struct cb_const
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CONST
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val STRING &cob_all_zero
+END_STRUCT struct cb_const
+FIELD sister MEMORY_BLOCK 111
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING SORT-RETURN
+FIELD values ALREADY_SEEN 110
+FIELD sister MEMORY_BLOCK 112
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING TALLY
+FIELD values ALREADY_SEEN 110
+FIELD sister MEMORY_BLOCK 113
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING XML-EVENT
+FIELD values MEMORY_BLOCK 114
+BEGIN_STRUCT struct cb_const
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CONST
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val STRING &cob_all_space
+END_STRUCT struct cb_const
+FIELD sister MEMORY_BLOCK 115
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 38
+END_STRUCT struct cb_tree_common
+FIELD name STRING TEST-REC
+FIELD children MEMORY_BLOCK 116
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 39
+END_STRUCT struct cb_tree_common
+FIELD name STRING BEGIN-REC
+FIELD values MEMORY_BLOCK 117
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 39
+END_STRUCT struct cb_tree_common
+FIELD data STRING [BEGI
+FIELD size INT 5
+END_STRUCT struct cb_literal
+FIELD parent ALREADY_SEEN 115
+FIELD sister MEMORY_BLOCK 118
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 40
+END_STRUCT struct cb_tree_common
+FIELD name STRING KEY-REC
+FIELD values ALREADY_SEEN 110
+FIELD parent ALREADY_SEEN 115
+FIELD sister MEMORY_BLOCK 119
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 41
+END_STRUCT struct cb_tree_common
+FIELD name STRING VALUE-REC
+FIELD values MEMORY_BLOCK 120
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 41
+END_STRUCT struct cb_tree_common
+FIELD data STRING 00000
+FIELD size INT 5
+END_STRUCT struct cb_literal
+FIELD parent ALREADY_SEEN 115
+FIELD sister MEMORY_BLOCK 121
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 42
+END_STRUCT struct cb_tree_common
+FIELD name STRING END-REC
+FIELD values MEMORY_BLOCK 122
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 42
+END_STRUCT struct cb_tree_common
+FIELD data STRING  END]
+FIELD size INT 5
+END_STRUCT struct cb_literal
+FIELD parent ALREADY_SEEN 115
+FIELD pic MEMORY_BLOCK 123
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 29
+FIELD size INT 5
+FIELD level INT 5
+FIELD offset INT 20
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 124
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 28
+FIELD size INT 5
+FIELD level INT 5
+FIELD offset INT 15
+FIELD occurs_max INT 1
+FIELD count INT 2
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 125
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING 9(10)
+FIELD size INT 10
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 10
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 27
+FIELD size INT 10
+FIELD level INT 5
+FIELD offset INT 5
+FIELD occurs_max INT 1
+FIELD count INT 2
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 126
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 26
+FIELD size INT 5
+FIELD level INT 5
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+END_STRUCT struct cb_field
+FIELD sister ALREADY_SEEN 012
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 25
+FIELD size INT 25
+FIELD level INT 1
+FIELD memory_size INT 25
+FIELD occurs_max INT 1
+FIELD count INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 127
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X(30)
+FIELD size INT 30
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 7
+FIELD size INT 30
+FIELD level INT 77
+FIELD memory_size INT 30
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_is_global INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 128
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING 9(5)
+FIELD size INT 5
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 5
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 4
+FIELD size INT 4
+FIELD level INT 77
+FIELD memory_size INT 4
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_BINARY
+FIELD flag_is_global INT 1
+FIELD flag_binary_swap INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 129
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING S9(9)
+FIELD size INT 9
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 9
+FIELD have_sign INT 1
+FIELD flag_is_calculated INT 1
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 3
+FIELD size INT 4
+FIELD level INT 77
+FIELD memory_size INT 4
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_INDEX
+FIELD flag_real_binary INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 130
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING S9(9)
+FIELD size INT 9
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 9
+FIELD have_sign INT 1
+FIELD flag_is_calculated INT 1
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 2
+FIELD size INT 4
+FIELD level INT 77
+FIELD memory_size INT 4
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_STATIC_INT_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_INDEX
+FIELD flag_real_binary INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD statement ENUM STMT_UNKNOWN
+FIELD word MEMORY_BLOCK 131
+BEGIN_STRUCT struct cb_word
+FIELD name STRING RETURN-CODE
+FIELD items MEMORY_BLOCK 132
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 109
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD hashval INT 595
+END_STRUCT struct cb_reference
+FIELD cast_type ENUM CB_CAST_INTEGER
+END_STRUCT struct cb_cast
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 133
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 99
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 134
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 135
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 136
+BEGIN_STRUCT struct cb_integer
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_INTEGER
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+END_STRUCT struct cb_integer
+NEW_ITEM MEMORY_BLOCK 137
+BEGIN_STRUCT struct cb_integer
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_INTEGER
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val INT 1
+END_STRUCT struct cb_integer
+NEW_ITEM MEMORY_BLOCK 138
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 99
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 139
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 99
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 140
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 99
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 012
+FIELD statement ENUM STMT_DISPLAY
+FIELD word ALREADY_SEEN 045
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1718
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 141
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 99
+END_STRUCT struct cb_tree_common
+FIELD data STRING FILE-STATUS=
+FIELD size INT 12
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 2
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 142
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 98
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_CLOSE
+FIELD body MEMORY_BLOCK 143
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 98
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 144
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 98
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_CLOSE
+FIELD body MEMORY_BLOCK 145
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 146
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_close
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 056
+NEW_ITEM ALREADY_SEEN 058
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 4
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD file ALREADY_SEEN 056
+FIELD handler_type ENUM NO_HANDLER
+FIELD flag_implicit INT 1
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 147
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 97
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 148
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 149
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 150
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 97
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 151
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 97
+END_STRUCT struct cb_tree_common
+FIELD data STRING CLOSE TEST-FILE...
+FIELD size INT 18
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 1
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 152
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 95
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 153
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 154
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 155
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 95
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 156
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 95
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 157
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 95
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 012
+FIELD statement ENUM STMT_DISPLAY
+FIELD word ALREADY_SEEN 045
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1718
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 158
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 95
+END_STRUCT struct cb_tree_common
+FIELD data STRING FILE-STATUS=
+FIELD size INT 12
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 2
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 159
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 94
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_CLOSE
+FIELD body MEMORY_BLOCK 160
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 94
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 161
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 94
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_CLOSE
+FIELD body MEMORY_BLOCK 162
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 163
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_close
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 009
+NEW_ITEM ALREADY_SEEN 011
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 4
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD file ALREADY_SEEN 009
+FIELD handler_type ENUM NO_HANDLER
+FIELD flag_implicit INT 1
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 164
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 93
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 165
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 166
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 167
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 93
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 168
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 93
+END_STRUCT struct cb_tree_common
+FIELD data STRING CLOSE NUM-FILE...
+FIELD size INT 17
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 1
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 169
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 75
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_PERFORM
+FIELD body MEMORY_BLOCK 170
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 171
+BEGIN_STRUCT struct cb_perform
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PERFORM
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD test ALREADY_SEEN 136
+FIELD body MEMORY_BLOCK 172
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 76
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 173
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 76
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_READ
+FIELD body MEMORY_BLOCK 174
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 175
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_read_next
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 009
+NEW_ITEM ALREADY_SEEN 011
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD file ALREADY_SEEN 009
+FIELD ex_handler MEMORY_BLOCK 176
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 78
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 177
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 78
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_MOVE
+FIELD body MEMORY_BLOCK 178
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 179
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING $E
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 180
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 78
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 013
+FIELD statement ENUM STMT_MOVE
+FIELD word MEMORY_BLOCK 181
+BEGIN_STRUCT struct cb_word
+FIELD name STRING END-OF-FILE
+FIELD items MEMORY_BLOCK 182
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 013
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 379
+FIELD flag_receiving INT 1
+FIELD flag_target INT 1
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+NEW_ITEM MEMORY_BLOCK 183
+BEGIN_STRUCT struct cb_integer
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_INTEGER
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 79
+END_STRUCT struct cb_tree_common
+FIELD val INT 89
+END_STRUCT struct cb_integer
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 2
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD not_ex_handler MEMORY_BLOCK 184
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 80
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 185
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 81
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 186
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 82
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 187
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 83
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 188
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 84
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 189
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 86
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 190
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 87
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 191
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 88
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 192
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 89
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 193
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 89
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_ADD
+FIELD body MEMORY_BLOCK 194
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 89
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 195
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_add_int
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 196
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 89
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 014
+FIELD statement ENUM STMT_ADD
+FIELD word MEMORY_BLOCK 197
+BEGIN_STRUCT struct cb_word
+FIELD name STRING KEY-NUM
+FIELD items MEMORY_BLOCK 198
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 014
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 51
+FIELD flag_target INT 1
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+NEW_ITEM MEMORY_BLOCK 199
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 200
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 89
+END_STRUCT struct cb_tree_common
+FIELD data STRING 1
+FIELD size INT 1
+END_STRUCT struct cb_literal
+FIELD cast_type ENUM CB_CAST_INTEGER
+END_STRUCT struct cb_cast
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+END_STRUCT struct cb_funcall
+FIELD purpose ALREADY_SEEN 136
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 201
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 88
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 202
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 203
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 204
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 88
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 205
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 88
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 206
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 88
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 012
+FIELD statement ENUM STMT_DISPLAY
+FIELD word ALREADY_SEEN 045
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1718
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 207
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 88
+END_STRUCT struct cb_tree_common
+FIELD data STRING FILE-STATUS=
+FIELD size INT 12
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 2
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 208
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 87
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_WRITE
+FIELD body MEMORY_BLOCK 209
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 210
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 211
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_write
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 056
+NEW_ITEM MEMORY_BLOCK 212
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 87
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 061
+FIELD statement ENUM STMT_WRITE
+FIELD word MEMORY_BLOCK 213
+BEGIN_STRUCT struct cb_word
+FIELD name STRING FD-TEST-REC
+FIELD items MEMORY_BLOCK 214
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 061
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 537
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 058
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 5
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 215
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING memcpy
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 216
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 217
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 87
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 061
+FIELD statement ENUM STMT_WRITE
+FIELD word ALREADY_SEEN 213
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 537
+FIELD flag_receiving INT 1
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD cast_type ENUM CB_CAST_ADDRESS
+END_STRUCT struct cb_cast
+NEW_ITEM MEMORY_BLOCK 218
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 219
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 87
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 115
+FIELD statement ENUM STMT_WRITE
+FIELD word MEMORY_BLOCK 220
+BEGIN_STRUCT struct cb_word
+FIELD name STRING TEST-REC
+FIELD items MEMORY_BLOCK 221
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 115
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 495
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD cast_type ENUM CB_CAST_ADDRESS
+END_STRUCT struct cb_cast
+NEW_ITEM MEMORY_BLOCK 222
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val ALREADY_SEEN 217
+FIELD cast_type ENUM CB_CAST_LENGTH
+END_STRUCT struct cb_cast
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD file ALREADY_SEEN 056
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 223
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 86
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 224
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 225
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 226
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 86
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 227
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 86
+END_STRUCT struct cb_tree_common
+FIELD data STRING WRITE...
+FIELD size INT 8
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 1
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 228
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 84
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 229
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 230
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 231
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 84
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 232
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 84
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 233
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 84
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 119
+FIELD statement ENUM STMT_DISPLAY
+FIELD word MEMORY_BLOCK 234
+BEGIN_STRUCT struct cb_word
+FIELD name STRING VALUE-REC
+FIELD items MEMORY_BLOCK 235
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 119
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1080
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 236
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 84
+END_STRUCT struct cb_tree_common
+FIELD data STRING VALUE-REC:
+FIELD size INT 10
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 2
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 237
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 83
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 238
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 239
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 240
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 83
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 241
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 83
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 242
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 83
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 118
+FIELD statement ENUM STMT_DISPLAY
+FIELD word MEMORY_BLOCK 243
+BEGIN_STRUCT struct cb_word
+FIELD name STRING KEY-REC
+FIELD items MEMORY_BLOCK 244
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 118
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1953
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 245
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 83
+END_STRUCT struct cb_tree_common
+FIELD data STRING KEY-REC  :
+FIELD size INT 10
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 2
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 246
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 82
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_MOVE
+FIELD body MEMORY_BLOCK 247
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 248
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING memcpy
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 249
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 250
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 82
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 119
+FIELD statement ENUM STMT_MOVE
+FIELD word ALREADY_SEEN 234
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1080
+FIELD flag_receiving INT 1
+FIELD flag_target INT 1
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD cast_type ENUM CB_CAST_ADDRESS
+END_STRUCT struct cb_cast
+NEW_ITEM MEMORY_BLOCK 251
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 252
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 82
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 014
+FIELD statement ENUM STMT_MOVE
+FIELD word ALREADY_SEEN 197
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 51
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD cast_type ENUM CB_CAST_ADDRESS
+END_STRUCT struct cb_cast
+NEW_ITEM MEMORY_BLOCK 253
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val ALREADY_SEEN 250
+FIELD cast_type ENUM CB_CAST_LENGTH
+END_STRUCT struct cb_cast
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 254
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 81
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_MOVE
+FIELD body MEMORY_BLOCK 255
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 256
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_move
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 257
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 81
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 051
+FIELD statement ENUM STMT_MOVE
+FIELD word MEMORY_BLOCK 258
+BEGIN_STRUCT struct cb_word
+FIELD name STRING KEY-READ
+FIELD items MEMORY_BLOCK 259
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 051
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 435
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+NEW_ITEM MEMORY_BLOCK 260
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 81
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 118
+FIELD statement ENUM STMT_MOVE
+FIELD word ALREADY_SEEN 243
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1953
+FIELD flag_receiving INT 1
+FIELD flag_target INT 1
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 2
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 261
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 80
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 262
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 263
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 264
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 80
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 265
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 80
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 266
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 80
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 051
+FIELD statement ENUM STMT_DISPLAY
+FIELD word ALREADY_SEEN 258
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 435
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 267
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 80
+END_STRUCT struct cb_tree_common
+FIELD data STRING KEY-READ  :
+FIELD size INT 11
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 2
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD handler_type ENUM AT_END_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD varying MEMORY_BLOCK 268
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 269
+BEGIN_STRUCT struct cb_perform_varying
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PERFORM_VARYING
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD until MEMORY_BLOCK 270
+BEGIN_STRUCT struct cb_binary_op
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_BINARY_OP
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 75
+END_STRUCT struct cb_tree_common
+FIELD x MEMORY_BLOCK 271
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING $G
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 272
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 75
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 013
+FIELD statement ENUM STMT_PERFORM
+FIELD word ALREADY_SEEN 181
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 379
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+NEW_ITEM MEMORY_BLOCK 273
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 75
+END_STRUCT struct cb_tree_common
+FIELD data STRING Y
+FIELD size INT 1
+END_STRUCT struct cb_literal
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 2
+END_STRUCT struct cb_funcall
+FIELD y ALREADY_SEEN 273
+FIELD op ENUM BOP_EQ
+FIELD flag ENUM 0
+END_STRUCT struct cb_binary_op
+END_STRUCT struct cb_perform_varying
+END_STRUCT struct cb_list
+FIELD perform_type ENUM CB_PERFORM_UNTIL
+END_STRUCT struct cb_perform
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 274
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 74
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_MOVE
+FIELD body MEMORY_BLOCK 275
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 276
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING $E
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 277
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 74
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 013
+FIELD statement ENUM STMT_MOVE
+FIELD word ALREADY_SEEN 181
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 379
+FIELD flag_receiving INT 1
+FIELD flag_target INT 1
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+NEW_ITEM MEMORY_BLOCK 278
+BEGIN_STRUCT struct cb_integer
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_INTEGER
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 74
+END_STRUCT struct cb_tree_common
+FIELD val INT 78
+END_STRUCT struct cb_integer
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 2
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 279
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 73
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_MOVE
+FIELD body MEMORY_BLOCK 280
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 281
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING memset
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 282
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 283
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 73
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 014
+FIELD statement ENUM STMT_MOVE
+FIELD word ALREADY_SEEN 197
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 51
+FIELD flag_receiving INT 1
+FIELD flag_target INT 1
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD cast_type ENUM CB_CAST_ADDRESS
+END_STRUCT struct cb_cast
+NEW_ITEM MEMORY_BLOCK 284
+BEGIN_STRUCT struct cb_integer
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_INTEGER
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 74
+END_STRUCT struct cb_tree_common
+FIELD val INT 48
+END_STRUCT struct cb_integer
+NEW_ITEM MEMORY_BLOCK 285
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val ALREADY_SEEN 283
+FIELD cast_type ENUM CB_CAST_LENGTH
+END_STRUCT struct cb_cast
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 286
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 71
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_IF
+FIELD body MEMORY_BLOCK 287
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 288
+BEGIN_STRUCT struct cb_if
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_IF
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD test MEMORY_BLOCK 289
+BEGIN_STRUCT struct cb_binary_op
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_BINARY_OP
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 71
+END_STRUCT struct cb_tree_common
+FIELD x MEMORY_BLOCK 290
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING memcmp
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 291
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 292
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 71
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 012
+FIELD statement ENUM STMT_IF
+FIELD word ALREADY_SEEN 045
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1718
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD cast_type ENUM CB_CAST_ADDRESS
+END_STRUCT struct cb_cast
+NEW_ITEM MEMORY_BLOCK 293
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 294
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 71
+END_STRUCT struct cb_tree_common
+FIELD data STRING 00
+FIELD size INT 2
+END_STRUCT struct cb_literal
+FIELD cast_type ENUM CB_CAST_ADDRESS
+END_STRUCT struct cb_cast
+NEW_ITEM MEMORY_BLOCK 295
+BEGIN_STRUCT struct cb_integer
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_INTEGER
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val INT 2
+END_STRUCT struct cb_integer
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+END_STRUCT struct cb_funcall
+FIELD y ALREADY_SEEN 294
+FIELD op ENUM BOP_NE
+FIELD flag ENUM 0
+END_STRUCT struct cb_binary_op
+FIELD stmt1 MEMORY_BLOCK 296
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 71
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 297
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 71
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_STOP_RUN
+FIELD body MEMORY_BLOCK 298
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 299
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_stop_run
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 300
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val ALREADY_SEEN 108
+FIELD cast_type ENUM CB_CAST_INTEGER
+END_STRUCT struct cb_cast
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD statement ENUM STMT_IF
+END_STRUCT struct cb_if
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 301
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 70
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 302
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 303
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 304
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 70
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 305
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 70
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 306
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 70
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 012
+FIELD statement ENUM STMT_DISPLAY
+FIELD word ALREADY_SEEN 045
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1718
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 307
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 70
+END_STRUCT struct cb_tree_common
+FIELD data STRING FILE-STATUS=
+FIELD size INT 12
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 2
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 308
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 69
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_OPEN
+FIELD body MEMORY_BLOCK 309
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 69
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 310
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 69
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_OPEN
+FIELD body MEMORY_BLOCK 311
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 312
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_open
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 056
+NEW_ITEM MEMORY_BLOCK 313
+BEGIN_STRUCT struct cb_direct
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_DIRECT
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 69
+END_STRUCT struct cb_tree_common
+FIELD line STRING COB_OPEN_OUTPUT
+FIELD flag_is_direct INT 1
+END_STRUCT struct cb_direct
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 058
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 4
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD file ALREADY_SEEN 056
+FIELD handler_type ENUM NO_HANDLER
+FIELD flag_implicit INT 1
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 314
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 68
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 315
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 316
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 317
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 68
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 318
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 68
+END_STRUCT struct cb_tree_common
+FIELD data STRING OPEN TEST-FILE...
+FIELD size INT 17
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 1
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 319
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 63
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_IF
+FIELD body MEMORY_BLOCK 320
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 321
+BEGIN_STRUCT struct cb_if
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_IF
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD test MEMORY_BLOCK 322
+BEGIN_STRUCT struct cb_binary_op
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_BINARY_OP
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 63
+END_STRUCT struct cb_tree_common
+FIELD x MEMORY_BLOCK 323
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING memcmp
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 324
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 325
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 63
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 012
+FIELD statement ENUM STMT_IF
+FIELD word ALREADY_SEEN 045
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1718
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD cast_type ENUM CB_CAST_ADDRESS
+END_STRUCT struct cb_cast
+NEW_ITEM MEMORY_BLOCK 326
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 327
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 63
+END_STRUCT struct cb_tree_common
+FIELD data STRING 00
+FIELD size INT 2
+END_STRUCT struct cb_literal
+FIELD cast_type ENUM CB_CAST_ADDRESS
+END_STRUCT struct cb_cast
+NEW_ITEM ALREADY_SEEN 295
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+END_STRUCT struct cb_funcall
+FIELD y ALREADY_SEEN 327
+FIELD op ENUM BOP_NE
+FIELD flag ENUM 0
+END_STRUCT struct cb_binary_op
+FIELD stmt1 MEMORY_BLOCK 328
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 64
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 329
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 65
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 330
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 65
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_STOP_RUN
+FIELD body MEMORY_BLOCK 331
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 332
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_stop_run
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 333
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val ALREADY_SEEN 108
+FIELD cast_type ENUM CB_CAST_INTEGER
+END_STRUCT struct cb_cast
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 334
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 64
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 335
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 336
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 337
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 64
+END_STRUCT struct cb_tree_common
+FIELD chain MEMORY_BLOCK 338
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 64
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 339
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 64
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 012
+FIELD statement ENUM STMT_DISPLAY
+FIELD word ALREADY_SEEN 045
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1718
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 340
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 64
+END_STRUCT struct cb_tree_common
+FIELD data STRING FILE-STATUS=
+FIELD size INT 12
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 2
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD statement ENUM STMT_IF
+END_STRUCT struct cb_if
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 341
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 62
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_OPEN
+FIELD body MEMORY_BLOCK 342
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 62
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 343
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 62
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_OPEN
+FIELD body MEMORY_BLOCK 344
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 345
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_open
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 009
+NEW_ITEM MEMORY_BLOCK 346
+BEGIN_STRUCT struct cb_direct
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_DIRECT
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 62
+END_STRUCT struct cb_tree_common
+FIELD line STRING COB_OPEN_INPUT
+FIELD flag_is_direct INT 1
+END_STRUCT struct cb_direct
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 011
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 4
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD file ALREADY_SEEN 009
+FIELD handler_type ENUM NO_HANDLER
+FIELD flag_implicit INT 1
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 347
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 61
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_DISPLAY
+FIELD body MEMORY_BLOCK 348
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 349
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING cob_display
+FIELD argv ARRAY
+NEW_ITEM ALREADY_SEEN 136
+NEW_ITEM ALREADY_SEEN 137
+NEW_ITEM MEMORY_BLOCK 350
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 61
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 351
+BEGIN_STRUCT struct cb_literal
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LITERAL
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 61
+END_STRUCT struct cb_tree_common
+FIELD data STRING OPEN NUM-FILE...
+FIELD size INT 16
+END_STRUCT struct cb_literal
+END_STRUCT struct cb_list
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+FIELD varcnt INT 1
+FIELD nolitcast INT 1
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value MEMORY_BLOCK 352
+BEGIN_STRUCT struct cb_statement
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_STATEMENT
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 59
+END_STRUCT struct cb_tree_common
+FIELD statement ENUM STMT_MOVE
+FIELD body MEMORY_BLOCK 353
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 354
+BEGIN_STRUCT struct cb_funcall
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FUNCALL
+FIELD category ENUM CB_CATEGORY_BOOLEAN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING memset
+FIELD argv ARRAY
+NEW_ITEM MEMORY_BLOCK 355
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val MEMORY_BLOCK 356
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 59
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 012
+FIELD statement ENUM STMT_MOVE
+FIELD word ALREADY_SEEN 045
+FIELD section ALREADY_SEEN 101
+FIELD paragraph ALREADY_SEEN 103
+FIELD hashval INT 1718
+FIELD flag_receiving INT 1
+FIELD flag_target INT 1
+FIELD flag_duped INT 1
+END_STRUCT struct cb_reference
+FIELD cast_type ENUM CB_CAST_ADDRESS
+END_STRUCT struct cb_cast
+NEW_ITEM MEMORY_BLOCK 357
+BEGIN_STRUCT struct cb_integer
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_INTEGER
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 59
+END_STRUCT struct cb_tree_common
+FIELD val INT 32
+END_STRUCT struct cb_integer
+NEW_ITEM MEMORY_BLOCK 358
+BEGIN_STRUCT struct cb_cast
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_CAST
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD val ALREADY_SEEN 356
+FIELD cast_type ENUM CB_CAST_LENGTH
+END_STRUCT struct cb_cast
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+NEW_ITEM NULL
+END_ARRAY
+FIELD argc INT 3
+END_STRUCT struct cb_funcall
+END_STRUCT struct cb_list
+FIELD handler_type ENUM NO_HANDLER
+END_STRUCT struct cb_statement
+END_STRUCT struct cb_list
+FIELD value ALREADY_SEEN 103
+END_STRUCT struct cb_list
+FIELD value ALREADY_SEEN 101
+END_STRUCT struct cb_list
+FIELD value ALREADY_SEEN 006
+END_STRUCT struct cb_list
+FIELD reference_list MEMORY_BLOCK 359
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 20
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 011
+END_STRUCT struct cb_list
+FIELD cb_return_code ALREADY_SEEN 108
+FIELD cb_sort_return MEMORY_BLOCK 360
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 111
+FIELD statement ENUM STMT_UNKNOWN
+FIELD word MEMORY_BLOCK 361
+BEGIN_STRUCT struct cb_word
+FIELD name STRING SORT-RETURN
+FIELD items MEMORY_BLOCK 362
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 111
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD hashval INT 1042
+END_STRUCT struct cb_reference
+FIELD cb_call_params MEMORY_BLOCK 363
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value MEMORY_BLOCK 364
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING NUMBER-OF-CALL-PARAMETERS
+FIELD values ALREADY_SEEN 110
+FIELD sister ALREADY_SEEN 109
+FIELD pic MEMORY_BLOCK 365
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING S9(9)
+FIELD size INT 9
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 9
+FIELD have_sign INT 1
+FIELD flag_is_calculated INT 1
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 1
+FIELD size INT 4
+FIELD level INT 77
+FIELD memory_size INT 4
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_INT_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_INDEX
+FIELD flag_local INT 1
+FIELD flag_real_binary INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD statement ENUM STMT_UNKNOWN
+FIELD word MEMORY_BLOCK 366
+BEGIN_STRUCT struct cb_word
+FIELD name STRING NUMBER-OF-CALL-PARAMETERS
+FIELD items MEMORY_BLOCK 367
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 364
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD hashval INT 886
+END_STRUCT struct cb_reference
+FIELD working_storage ALREADY_SEEN 364
+FIELD linkage_storage MEMORY_BLOCK 368
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING XML-NAMESPACE
+FIELD sister MEMORY_BLOCK 369
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING XML-NAMESPACE-PREFIX
+FIELD sister MEMORY_BLOCK 370
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NATIONAL
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING XML-NNAMESPACE
+FIELD sister MEMORY_BLOCK 371
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NATIONAL
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING XML-NNAMESPACE-PREFIX
+FIELD sister MEMORY_BLOCK 372
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_NATIONAL
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING XML-NTEXT
+FIELD sister MEMORY_BLOCK 373
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING XML-TEXT
+FIELD pic MEMORY_BLOCK 374
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X
+FIELD size INT 1
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 14
+FIELD size INT 1
+FIELD level INT 1
+FIELD memory_size INT 1
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_LINKAGE
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_base INT 1
+FIELD flag_is_global INT 1
+FIELD flag_local INT 1
+FIELD flag_any_length INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 375
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING N
+FIELD size INT 2
+FIELD category ENUM CB_CATEGORY_NATIONAL
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 13
+FIELD size INT 2
+FIELD level INT 1
+FIELD memory_size INT 2
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_LINKAGE
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_base INT 1
+FIELD flag_is_global INT 1
+FIELD flag_local INT 1
+FIELD flag_any_length INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 376
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING N
+FIELD size INT 2
+FIELD category ENUM CB_CATEGORY_NATIONAL
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 12
+FIELD size INT 2
+FIELD level INT 1
+FIELD memory_size INT 2
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_LINKAGE
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_base INT 1
+FIELD flag_is_global INT 1
+FIELD flag_local INT 1
+FIELD flag_any_length INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 377
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING N
+FIELD size INT 2
+FIELD category ENUM CB_CATEGORY_NATIONAL
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 11
+FIELD size INT 2
+FIELD level INT 1
+FIELD memory_size INT 2
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_LINKAGE
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_base INT 1
+FIELD flag_is_global INT 1
+FIELD flag_local INT 1
+FIELD flag_any_length INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 378
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X
+FIELD size INT 1
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 10
+FIELD size INT 1
+FIELD level INT 1
+FIELD memory_size INT 1
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_LINKAGE
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_base INT 1
+FIELD flag_is_global INT 1
+FIELD flag_local INT 1
+FIELD flag_any_length INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD pic MEMORY_BLOCK 379
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING X
+FIELD size INT 1
+FIELD category ENUM CB_CATEGORY_ALPHANUMERIC
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 9
+FIELD size INT 1
+FIELD level INT 1
+FIELD memory_size INT 1
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_LINKAGE
+FIELD usage ENUM CB_USAGE_DISPLAY
+FIELD flag_base INT 1
+FIELD flag_is_global INT 1
+FIELD flag_local INT 1
+FIELD flag_any_length INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD global_handler ARRAY
+NEW_ITEM INLINE_BLOCK
+BEGIN_STRUCT struct handler_struct
+END_STRUCT struct handler_struct
+NEW_ITEM INLINE_BLOCK
+BEGIN_STRUCT struct handler_struct
+END_STRUCT struct handler_struct
+NEW_ITEM INLINE_BLOCK
+BEGIN_STRUCT struct handler_struct
+END_STRUCT struct handler_struct
+NEW_ITEM INLINE_BLOCK
+BEGIN_STRUCT struct handler_struct
+END_STRUCT struct handler_struct
+NEW_ITEM INLINE_BLOCK
+BEGIN_STRUCT struct handler_struct
+END_STRUCT struct handler_struct
+END_ARRAY
+FIELD crt_status MEMORY_BLOCK 380
+BEGIN_STRUCT struct cb_reference
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_REFERENCE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING writefile.cbl
+FIELD source_line INT 57
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 036
+FIELD statement ENUM STMT_UNKNOWN
+FIELD word MEMORY_BLOCK 381
+BEGIN_STRUCT struct cb_word
+FIELD name STRING COB-CRT-STATUS
+FIELD items MEMORY_BLOCK 382
+BEGIN_STRUCT struct cb_list
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_LIST
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD value ALREADY_SEEN 036
+END_STRUCT struct cb_list
+FIELD count INT 1
+END_STRUCT struct cb_word
+FIELD hashval INT 1811
+END_STRUCT struct cb_reference
+FIELD xml_code MEMORY_BLOCK 383
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING XML-CODE
+FIELD values ALREADY_SEEN 110
+FIELD pic MEMORY_BLOCK 384
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING S9(9)
+FIELD size INT 9
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 9
+FIELD have_sign INT 1
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 6
+FIELD size INT 4
+FIELD level INT 77
+FIELD memory_size INT 4
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_BINARY
+FIELD flag_is_global INT 1
+FIELD flag_binary_swap INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD xml_event ALREADY_SEEN 113
+FIELD xml_information MEMORY_BLOCK 385
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING XML-INFORMATION
+FIELD values ALREADY_SEEN 110
+FIELD pic MEMORY_BLOCK 386
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING S9(9)
+FIELD size INT 9
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 9
+FIELD have_sign INT 1
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 8
+FIELD size INT 4
+FIELD level INT 77
+FIELD memory_size INT 4
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_BINARY
+FIELD flag_is_global INT 1
+FIELD flag_binary_swap INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD xml_namespace ALREADY_SEEN 368
+FIELD xml_nnamespace ALREADY_SEEN 370
+FIELD xml_namespace_prefix ALREADY_SEEN 369
+FIELD xml_nnamespace_prefix ALREADY_SEEN 371
+FIELD xml_ntext ALREADY_SEEN 372
+FIELD xml_text ALREADY_SEEN 373
+FIELD json_code MEMORY_BLOCK 387
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING JSON-CODE
+FIELD values ALREADY_SEEN 110
+FIELD pic MEMORY_BLOCK 388
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING S9(9)
+FIELD size INT 9
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 9
+FIELD have_sign INT 1
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 15
+FIELD size INT 4
+FIELD level INT 77
+FIELD memory_size INT 4
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_BINARY
+FIELD flag_is_global INT 1
+FIELD flag_binary_swap INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD json_status MEMORY_BLOCK 389
+BEGIN_STRUCT struct cb_field
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_FIELD
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file STRING register-definition
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD name STRING JSON-STATUS
+FIELD values ALREADY_SEEN 110
+FIELD pic MEMORY_BLOCK 390
+BEGIN_STRUCT struct cb_picture
+FIELD common INLINE_BLOCK
+BEGIN_STRUCT struct cb_tree_common
+FIELD tag ENUM CB_TAG_PICTURE
+FIELD category ENUM CB_CATEGORY_UNKNOWN
+FIELD source_file NULL
+FIELD source_line INT 0
+END_STRUCT struct cb_tree_common
+FIELD orig STRING S9(9)
+FIELD size INT 9
+FIELD category ENUM CB_CATEGORY_NUMERIC
+FIELD digits INT 9
+FIELD have_sign INT 1
+END_STRUCT struct cb_picture
+FIELD xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_xref
+END_STRUCT struct cb_xref
+FIELD id INT 16
+FIELD size INT 4
+FIELD level INT 77
+FIELD memory_size INT 4
+FIELD occurs_max INT 1
+FIELD index_type ENUM CB_NORMAL_INDEX
+FIELD storage ENUM CB_STORAGE_WORKING
+FIELD usage ENUM CB_USAGE_BINARY
+FIELD flag_is_global INT 1
+FIELD flag_binary_swap INT 1
+FIELD flag_no_init INT 1
+FIELD flag_internal_register INT 1
+FIELD flag_is_verified INT 1
+END_STRUCT struct cb_field
+FIELD call_xref INLINE_BLOCK
+BEGIN_STRUCT struct cb_call_xref
+END_STRUCT struct cb_call_xref
+FIELD last_source_line INT 103
+FIELD decimal_point INT 46
+FIELD currency_symbol INT 36
+FIELD numeric_separator INT 44
+FIELD prog_type ENUM COB_MODULE_TYPE_PROGRAM
+FIELD entry_convention ALREADY_SEEN 005
+FIELD procedure_list MEMORY_BLOCK 391
+BEGIN_STRUCT struct cb_procedure_list
+FIELD proc INLINE_BLOCK
+BEGIN_STRUCT struct cob_prof_procedure
+FIELD text STRING WRITEFILE
+FIELD file STRING writefile.cbl
+FIELD line INT 57
+FIELD kind ENUM COB_PROF_PROCEDURE_MODULE
+END_STRUCT struct cob_prof_procedure
+END_STRUCT struct cb_procedure_list
+FIELD procedure_list_last ALREADY_SEEN 391
+FIELD procedure_list_len INT 1
+FIELD prof_current_section INT -1
+FIELD prof_current_paragraph INT -1
+FIELD prof_current_call INT -1
+FIELD flag_main INT 1
+FIELD flag_validated INT 1
+END_STRUCT struct cb_program
