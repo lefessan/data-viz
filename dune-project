@@ -29,7 +29,9 @@
  (depends
    (ocaml (>= 4.07.0))
    ocaml-canvas
+   lablgtk3
    (ez_file ( >= 0.1 ))
+   cairo2
    ppx_inline_test
    ppx_expect
    odoc

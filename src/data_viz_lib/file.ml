@@ -33,7 +33,7 @@ let load_file file =
   let get_line i =
     let line = lines.(i) in
     let i = i + 1 in
-    Printf.eprintf "%05d: %s\n%!" i line;
+    (* Printf.eprintf "%05d: %s\n%!" i line; *)
     line, i
   in
 

@@ -5,7 +5,7 @@ version:0.9.0
 
 # hash of toml configuration files
 # used for generation of all files
-07f6c3586e6721e0941910e8a73b675f:.
+05792c3e14ffcefa3b5511b7f028098a:.
 # end context for .
 
 # begin context for .github/workflows/workflow.yml
@@ -95,7 +95,7 @@ c8281f46ba9a11d0b61bc8ef67eaa357:docs/style.css
 
 # begin context for dune-project
 # file dune-project
-7d637e8f0ac1200c8e1439fc94924583:dune-project
+822a9a83a6b3c85b3324eedc7bb4edd2:dune-project
 # end context for dune-project
 
 # begin context for opam/data-viz.opam
@@ -105,7 +105,7 @@ c8281f46ba9a11d0b61bc8ef67eaa357:docs/style.css
 
 # begin context for opam/data_viz_lib.opam
 # file opam/data_viz_lib.opam
-57904b07d19a0b98aeed17a32ee1ebac:opam/data_viz_lib.opam
+6e7a9b2df1a5c2e844efdff7fba5ffbf:opam/data_viz_lib.opam
 # end context for opam/data_viz_lib.opam
 
 # begin context for scripts/after.sh
@@ -190,7 +190,7 @@ c4f6be0258b923d946dfe993a8396485:src/data-viz/main.ml
 
 # begin context for src/data_viz_lib/dune
 # file src/data_viz_lib/dune
-ad1505c52167ad7ffb54cbb33d4a0690:src/data_viz_lib/dune
+0a911b2bcc6f926ef2fa8b54eca73e24:src/data_viz_lib/dune
 # end context for src/data_viz_lib/dune
 
 # begin context for src/data_viz_lib/index.mld

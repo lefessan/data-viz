@@ -10,6 +10,9 @@
 (*                                                                        *)
 (**************************************************************************)
 
+module GRAPHICS = OCamlCanvas.V1 (* or OcamlCanvas.V1 *)
+
+
 type block_class = {
   class_name : string ;
 }
@@ -31,10 +34,12 @@ and value =
   | Array of value array
 
 type state = {
-  canvas : OcamlCanvas.V1.Canvas.t ;
+  canvas : GRAPHICS.Canvas.t ;
   mutable x0 : float ;
   mutable y0 : float ;
   mutable canvas_width : float ;
   mutable canvas_height : float ;
-  mutable path : (string * block) list ;
+  mutable path : (string * block * int) list ;
+  mutable size : int ;
+  mutable pos_y : float ;
 }

@@ -55,6 +55,8 @@ gen-version = "version.ml"
 [dependencies]
 ocaml-canvas = ""
 ez_file = "0.1"
+lablgtk3 = ""
+cairo2 = ""
 
 # package tools dependencies
 [tools]
